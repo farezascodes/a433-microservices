@@ -1,0 +1,29 @@
+version: '3'
+services:
+  item-db:
+    image: mongo:6-jammy #ambil image dari docker repo yaitu image mongo versi 6
+    container_name: item-db # set container name sebagai item-db
+    ports:
+      - '27017:27017' # set host:container port
+    volumes:
+      - app-db:/data/db # bind volume
+    networks:
+      - appdbnetwork # set network
+  item-app:
+    image: ghcr.io/farezascodes/a433-microservices/item-app:latest # pilih image dari github cr
+    container_name: item-app # set container name sebagai item-app
+    environment:
+      - DB_HOST=item-db # set environment variable db_host
+    ports:
+      - "80:8080" # set host:container port
+    depends_on:
+      - item-db # set supaya item-app berjalan setelah item-db ready
+    restart: on-failure # set untuk container selalu restart apabila terdapat kegagalan run
+    networks:
+      - appdbnetwork # set network
+volumes:
+  app-db:
+networks:
+  appdbnetwork:
+    name: app-db-network
+    driver: bridge
