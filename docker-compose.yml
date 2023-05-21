@@ -10,7 +10,7 @@ services:
     networks:
       - appdbnetwork # set network
   item-app:
-    image: ghcr.io/farezascodes/a433-microservices/item-app:latest # pilih image dari github cr
+    image: ghcr.io/farezascodes/a433-microservices/item-app:v1 # pilih image dari github cr
     container_name: item-app # set container name sebagai item-app
     environment:
       - DB_HOST=item-db # set environment variable db_host
