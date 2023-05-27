@@ -1,138 +1,39 @@
-item-app  | 
-item-app  | > docker-software-delivery@1.0.0 start /app
-item-app  | > node ./bin/www
-item-app  | 
-item-app  | NODE_ENV: production
-item-app  | /app/node_modules/mongodb/lib/mongo_client.js:421
-item-app  |           throw err
-item-app  |           ^
-item-app  | 
-item-app  | AssertionError [ERR_ASSERTION]: null == Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 172.28.0.2:27017
-item-app  |     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
-item-app  |   name: 'MongoError'
-item-app  | }]
-item-app  |     at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
-item-app  |     at Pool.emit (events.js:400:28)
-item-app  |     at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
-item-app  |     at Object.onceWrapper (events.js:520:26)
-item-app  |     at Connection.emit (e...
-item-app  |     at /app/app.js:24:10
-item-app  |     at connectCallback (/app/node_modules/mongodb/lib/mongo_client.js:527:5)
-item-app  |     at /app/node_modules/mongodb/lib/mongo_client.js:418:11
-item-app  |     at processTicksAndRejections (internal/process/task_queues.js:77:11) {
-item-app  |   generatedMessage: true,
-item-app  |   code: 'ERR_ASSERTION',
-item-app  |   actual: null,
-item-app  |   expected: Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 172.28.0.2:27017
-item-app  |       at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
-item-app  |     name: 'MongoError'
-item-app  |   }]
-item-app  |       at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
-item-app  |       at Pool.emit (events.js:400:28)
-item-app  |       at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
-item-app  |       at Object.onceWrapper (events.js:520:26)
-item-app  |       at Connection.emit (events.js:400:28)
-item-app  |       at Socket.<anonymous> (/app/node_modules/mongodb-core/lib/connection/connection.js:189:49)
-item-app  |       at Object.onceWrapper (events.js:520:26)
-item-app  |       at Socket.emit (events.js:400:28)
-item-app  |       at emitErrorNT (internal/streams/destroy.js:106:8)
-item-app  |       at emitErrorCloseNT (internal/streams/destroy.js:74:3),
-item-app  |   operator: '=='
-item-app  | }
-item-app  | npm ERR! code ELIFECYCLE
-item-app  | npm ERR! errno 1
-item-app  | npm ERR! docker-software-delivery@1.0.0 start: `node ./bin/www`
-item-app  | npm ERR! Exit status 1
-item-app  | npm ERR! 
-item-app  | npm ERR! Failed at the docker-software-delivery@1.0.0 start script.
-item-app  | npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-item-app  | 
-item-app  | npm ERR! A complete log of this run can be found in:
-item-app  | npm ERR!     /root/.npm/_logs/2023-05-21T14_57_50_033Z-debug.log
-item-app  | 
-item-app  | > docker-software-delivery@1.0.0 start /app
-item-app  | > node ./bin/www
-item-app  | 
-item-app  | NODE_ENV: production
-item-app  | /app/node_modules/mongodb/lib/mongo_client.js:421
-item-app  |           throw err
-item-app  |           ^
-item-app  | 
-item-app  | AssertionError [ERR_ASSERTION]: null == Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 172.28.0.2:27017
-item-app  |     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
-item-app  |   name: 'MongoError'
-item-app  | }]
-item-app  |     at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
-item-app  |     at Pool.emit (events.js:400:28)
-item-app  |     at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
-item-app  |     at Object.onceWrapper (events.js:520:26)
-item-app  |     at Connection.emit (e...
-item-app  |     at /app/app.js:24:10
-item-app  |     at connectCallback (/app/node_modules/mongodb/lib/mongo_client.js:527:5)
-item-app  |     at /app/node_modules/mongodb/lib/mongo_client.js:418:11
-item-app  |     at processTicksAndRejections (internal/process/task_queues.js:77:11) {
-item-app  |   generatedMessage: true,
-item-app  |   code: 'ERR_ASSERTION',
-item-app  |   actual: null,
-item-app  |   expected: Error [MongoError]: failed to connect to server [item-db:27017] on first connect [Error: connect ECONNREFUSED 172.28.0.2:27017
-item-app  |       at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
-item-app  |     name: 'MongoError'
-item-app  |   }]
-item-app  |       at Pool.<anonymous> (/app/node_modules/mongodb-core/lib/topologies/server.js:336:35)
-item-app  |       at Pool.emit (events.js:400:28)
-item-app  |       at Connection.<anonymous> (/app/node_modules/mongodb-core/lib/connection/pool.js:280:12)
-item-app  |       at Object.onceWrapper (events.js:520:26)
-item-app  |       at Connection.emit (events.js:400:28)
-item-app  |       at Socket.<anonymous> (/app/node_modules/mongodb-core/lib/connection/connection.js:189:49)
-item-app  |       at Object.onceWrapper (events.js:520:26)
-item-app  |       at Socket.emit (events.js:400:28)
-item-app  |       at emitErrorNT (internal/streams/destroy.js:106:8)
-item-app  |       at emitErrorCloseNT (internal/streams/destroy.js:74:3),
-item-app  |   operator: '=='
-item-app  | }
-item-app  | npm ERR! code ELIFECYCLE
-item-app  | npm ERR! errno 1
-item-app  | npm ERR! docker-software-delivery@1.0.0 start: `node ./bin/www`
-item-app  | npm ERR! Exit status 1
-item-app  | npm ERR! 
-item-app  | npm ERR! Failed at the docker-software-delivery@1.0.0 start script.
-item-app  | npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-item-app  | 
-item-app  | npm ERR! A complete log of this run can be found in:
-item-app  | npm ERR!     /root/.npm/_logs/2023-05-21T14_57_50_807Z-debug.log
+item-db  | 2023-05-27T08:12:38.661+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=1c2a9a42699a
+item-db  | 2023-05-27T08:12:38.662+0000 I CONTROL  [initandlisten] db version v3.6.23
+item-db  | 2023-05-27T08:12:38.662+0000 I CONTROL  [initandlisten] git version: d352e6a4764659e0d0350ce77279de3c1f243e5c
+item-db  | 2023-05-27T08:12:38.662+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+item-db  | 2023-05-27T08:12:38.662+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+item-db  | 2023-05-27T08:12:38.662+0000 I CONTROL  [initandlisten] modules: none
+item-db  | 2023-05-27T08:12:38.662+0000 I CONTROL  [initandlisten] build environment:
+item-db  | 2023-05-27T08:12:38.662+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
+item-db  | 2023-05-27T08:12:38.662+0000 I CONTROL  [initandlisten]     distarch: aarch64
+item-db  | 2023-05-27T08:12:38.662+0000 I CONTROL  [initandlisten]     target_arch: aarch64
+item-db  | 2023-05-27T08:12:38.662+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
+item-db  | 2023-05-27T08:12:38.662+0000 I STORAGE  [initandlisten] 
+item-db  | 2023-05-27T08:12:38.662+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+item-db  | 2023-05-27T08:12:38.662+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+item-db  | 2023-05-27T08:12:38.662+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1454M,cache_overflow=(file_max=0M),session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+item-db  | 2023-05-27T08:12:38.693+0000 I STORAGE  [initandlisten] WiredTiger message [1685175158:693428][1:0xffff80843000], txn-recover: Set global recovery timestamp: 0
+item-db  | 2023-05-27T08:12:38.709+0000 I CONTROL  [initandlisten] 
+item-db  | 2023-05-27T08:12:38.709+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+item-db  | 2023-05-27T08:12:38.709+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+item-db  | 2023-05-27T08:12:38.709+0000 I CONTROL  [initandlisten] 
+item-db  | 2023-05-27T08:12:38.709+0000 I STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 5e93f859-8479-44f7-b51f-9f18e16e0ce5
+item-db  | 2023-05-27T08:12:38.717+0000 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.6
+item-db  | 2023-05-27T08:12:38.718+0000 I STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: 1f006ef2-89f6-4217-8272-2953b66e4154
+item-db  | 2023-05-27T08:12:38.731+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+item-db  | 2023-05-27T08:12:38.731+0000 I NETWORK  [initandlisten] listening via socket bound to 0.0.0.0
+item-db  | 2023-05-27T08:12:38.731+0000 I NETWORK  [initandlisten] listening via socket bound to /tmp/mongodb-27017.sock
+item-db  | 2023-05-27T08:12:38.731+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+item-db  | 2023-05-27T08:12:38.732+0000 I STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with generated UUID: 64b29be7-6a06-4056-b72c-3b9117e76393
+item-db  | 2023-05-27T08:12:38.749+0000 I INDEX    [LogicalSessionCacheRefresh] build index on: config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 }
+item-db  | 2023-05-27T08:12:38.749+0000 I INDEX    [LogicalSessionCacheRefresh] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+item-db  | 2023-05-27T08:12:38.749+0000 I INDEX    [LogicalSessionCacheRefresh] build index done.  scanned 0 total records. 0 secs
+item-db  | 2023-05-27T08:12:39.179+0000 I NETWORK  [listener] connection accepted from 192.168.224.3:54588 #1 (1 connection now open)
+item-db  | 2023-05-27T08:12:39.184+0000 I NETWORK  [conn1] received client metadata from 192.168.224.3:54588 conn1: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Linux", name: "linux", architecture: "arm64", version: "5.10.104-linuxkit" }, platform: "Node.js v14.21.3, LE, mongodb-core: 2.1.20" }
 item-app  | 
 item-app  | > docker-software-delivery@1.0.0 start /app
 item-app  | > node ./bin/www
 item-app  | 
 item-app  | NODE_ENV: production
 item-app  | Connected to database
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.556+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.557+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true}}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.557+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.558+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.559+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.559+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"ShardSplitDonorService","namespace":"config.tenantSplitDonors"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.559+00:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.559+00:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":1,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"8f7f32bcd735"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.559+00:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"6.0.5","gitVersion":"c9a99c120371d4d4c52cbb15dac34a36ce8d3b1d","openSSLVersion":"OpenSSL 3.0.2 15 Mar 2022","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu2204","distarch":"aarch64","target_arch":"aarch64"}}}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.559+00:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"22.04"}}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.559+00:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"net":{"bindIp":"*"}}}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.561+00:00"},"s":"I",  "c":"STORAGE",  "id":22270,   "ctx":"initandlisten","msg":"Storage engine to use detected by data files","attr":{"dbpath":"/data/db","storageEngine":"wiredTiger"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.561+00:00"},"s":"I",  "c":"STORAGE",  "id":22297,   "ctx":"initandlisten","msg":"Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem","tags":["startupWarnings"]}
-item-db   | {"t":{"$date":"2023-05-21T14:57:49.562+00:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=1454M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,remove=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=2000),statistics_log=(wait=0),json_output=(error,message),verbose=[recovery_progress:1,checkpoint_progress:1,compact_progress:1,backup:0,checkpoint:0,compact:0,evict:0,history_store:0,recovery:0,rts:0,salvage:0,tiered:0,timestamp:0,transaction:0,verify:0,log:0],"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.797+00:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":1235}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.797+00:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.806+00:00"},"s":"W",  "c":"CONTROL",  "id":22120,   "ctx":"initandlisten","msg":"Access control is not enabled for the database. Read and write access to data and configuration is unrestricted","tags":["startupWarnings"]}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.806+00:00"},"s":"W",  "c":"CONTROL",  "id":5123300, "ctx":"initandlisten","msg":"vm.max_map_count is too low","attr":{"currentValue":262144,"recommendedMinimum":1677720,"maxConns":838860},"tags":["startupWarnings"]}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.811+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":17,"maxWireVersion":17},"outgoing":{"minWireVersion":17,"maxWireVersion":17},"isInternalClient":true}}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.812+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"6.0","context":"startup"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.812+00:00"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.813+00:00"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.815+00:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"/data/db/diagnostic.data"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.825+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"initandlisten","msg":"Setting new configuration state","attr":{"newState":"ConfigReplicationDisabled","oldState":"ConfigPreStart"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.825+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.827+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"/tmp/mongodb-27017.sock"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.827+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"0.0.0.0"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:50.827+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:51.668+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.28.0.3:43250","uuid":"da7bfe59-739e-4fdf-9e85-1d00125ee651","connectionId":1,"connectionCount":1}}
-item-db   | {"t":{"$date":"2023-05-21T14:57:51.670+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"172.28.0.3:43250","client":"conn1","doc":{"driver":{"name":"nodejs","version":"2.2.36"},"os":{"type":"Linux","name":"linux","architecture":"arm64","version":"5.10.104-linuxkit"},"platform":"Node.js v14.21.3, LE, mongodb-core: 2.1.20"}}}

@@ -1,8 +1,9 @@
 version: '3'
 services:
   item-db:
-    image: mongo:6-jammy #ambil image dari docker repo yaitu image mongo versi 6
+    image: mongo:3 #ambil image dari docker repo yaitu image mongo versi 6
     container_name: item-db # set container name sebagai item-db
+    # command: sh -c "mongod --repair"
     ports:
       - '27017:27017' # set host:container port
     volumes:
@@ -13,7 +14,10 @@ services:
     image: ghcr.io/farezascodes/a433-microservices/item-app:v1 # pilih image dari github cr
     container_name: item-app # set container name sebagai item-app
     environment:
-      - DB_HOST=item-db # set environment variable db_host
+      # - DB_HOST=item-db # set environment variable db_host
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+      MONGO_INITDB_DATABASE: accumulator
     ports:
       - "80:8080" # set host:container port
     depends_on:
@@ -21,8 +25,11 @@ services:
     restart: on-failure # set untuk container selalu restart apabila terdapat kegagalan run
     networks:
       - appdbnetwork # set network
+
 volumes:
   app-db:
+    name: "app-db"
+  
 networks:
   appdbnetwork:
     name: app-db-network
